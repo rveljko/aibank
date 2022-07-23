@@ -1,1 +1,13 @@
 @use '../abstracts/' as *;
+
+.layout {
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 3.125rem;
+
+    @include breakpoint(large) {
+        flex-direction: row;
+        gap: 1rem;
+    }
+}

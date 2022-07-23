@@ -1,7 +1,11 @@
 @use '../abstracts/' as *;
 
 .padding {
-    padding: 6.25rem 0;
+    padding: 2.5rem 0;
+
+    @include breakpoint(large) {
+        padding: 6.25rem 0;
+    }
 
     &--navigation {
         padding: 2rem 0;
