@@ -9,5 +9,9 @@
     @include breakpoint(large) {
         flex-direction: row;
         gap: 1rem;
+
+        &--reverse {
+            flex-direction: row-reverse;
+        }
     }
 }
