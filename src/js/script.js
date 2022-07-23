@@ -3,6 +3,7 @@ const closeMenu = document.getElementById('closeMenu');
 const sideBar = document.getElementById('sideBar');
 const overlay = document.getElementById('overlay');
 const sideBarLinks = document.querySelectorAll('.sidebar__link');
+const faqContainers = document.querySelectorAll('.faq__container');
 
 const openingMenu = () => {
     sideBar.classList.remove('close');
@@ -25,4 +26,14 @@ closeMenu.addEventListener('click', closingMenu);
 overlay.addEventListener('click', closingMenu);
 sideBarLinks.forEach(sideBarLink => {
     sideBarLink.addEventListener('click', closingMenu);
+});
+faqContainers.forEach(faqContainer => {
+    faqContainer.addEventListener('click', () => {
+        faqContainers.forEach(item => {
+            if ( item !== faqContainer ) {
+                item.classList.remove('activefaq');
+            }
+        })
+        faqContainer.classList.toggle('activefaq');
+    });
 });
