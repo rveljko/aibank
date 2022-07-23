@@ -1,1 +1,55 @@
 @use '../abstracts/' as *;
+
+.sidebar {
+    position: fixed;
+    width: 80%;
+    height: 100vh;
+    background-color: $background-color;
+    top: 0;
+    z-index: 999;
+    transition: 500ms ease-in-out;
+    overflow-y: auto;
+
+    &__close {
+        margin-bottom: 5rem;
+    }
+
+    &__menu {
+        cursor: pointer;
+        float: right;
+        padding: 1.625rem 0;
+    }
+
+    &__line {
+        display: block;
+        height: .1875rem;
+        width: 2rem;
+        background-color: $black;
+        border-radius: 100vmax;
+
+        &:first-child {
+            transform: rotate(45deg) translateY(.125rem);
+        }
+
+        &:last-child {
+            transform: rotate(-45deg) translateY(-.125rem);
+        }
+    }
+
+    &__list {
+        padding: 0 0 2rem 2rem;
+    }
+
+    &__item {
+        
+        &:not(:last-child) {
+            margin-bottom: 1.625rem;
+        }
+    }
+
+    &__link {
+        font-size: 1.875rem;
+        font-weight: 700;
+        color: $neutral;
+    }
+}

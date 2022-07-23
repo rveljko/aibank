@@ -1,1 +1,15 @@
 @use '../abstracts/' as *;
+
+.button {
+    display: inline-block;
+    font-weight: 700;
+    color: $black !important;
+    background: linear-gradient(45deg, $primary-light, $secondary-light);
+    padding: .7em 1.4em;
+    border-radius: 100vmax;
+    
+    &:hover {
+        background: linear-gradient(45deg, $primary-dark, $secondary-dark);
+        color: $white !important;
+    }
+}
