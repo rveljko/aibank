@@ -4,6 +4,10 @@
     background-color: $background-color;
     width: 100%;
 
+    &__content {
+        animation: pageLoad 2s forwards;
+    }
+
     &__heading {
         max-width: 14ch;
     }
