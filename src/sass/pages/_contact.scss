@@ -13,15 +13,20 @@
     }
 
     &__informations {
+        width: 100%;
+        max-width: 33.125rem;
+    }
+    
+    &__map {
 
         iframe {
             border: 0;
             height: 22.5rem;
             width: 100%;
-            max-width: 33.125rem;
             border-radius: .25rem;
             margin-bottom: 2rem;
         }
+
     }
 
     &__links {
